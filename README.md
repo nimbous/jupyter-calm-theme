@@ -5,6 +5,9 @@
 Jupyter Calm Theme for Jupyter Lab 2
 
 
+![Screenshot of the theme](https://user-images.githubusercontent.com/33524244/93402162-e2ebee00-f87b-11ea-8a11-3c49d21803d2.png)
+
+
 
 ## Requirements
 
