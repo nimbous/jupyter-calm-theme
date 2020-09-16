@@ -13,7 +13,7 @@ Jupyter Calm Theme for Jupyter Lab 2
 ## Install
 
 ```bash
-jupyter labextension install jupyter-calm-theme
+jupyter labextension install @nimbous/jupyter-calm-theme
 ```
 
 ## Contributing
