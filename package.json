@@ -1,0 +1,72 @@
+{
+  "name": "@nimbous/jupyterlab-calm-theme",
+  "version": "0.1.0",
+  "description": "Calm Theme for Jupyter Lab. Inspired by Night Owl theme.",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension",
+    "jupyterlab-theme"
+  ],
+  "homepage": "https://github.com/nimbous/jupyter-calm-theme",
+  "bugs": {
+    "url": "https://github.com/nimbous/jupyter-calm-theme/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Atilla Guzel",
+  "files": [
+    "lib/*.d.ts",
+    "lib/*.js.map",
+    "lib/*.js",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "directories": {
+    "lib": "lib/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nimbous/jupyter-calm-theme.git"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "build:dev": "jlpm install && jlpm build",
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "clean:slate": "jlpm run clean && rimraf node_modules",
+    "precommit": "lint-staged",
+    "prepublishOnly": "npm run build",
+    "prettier": "prettier --write '**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}'",
+    "watch": "tsc -b --watch"
+  },
+  "lint-staged": {
+    "**/*{.ts,.tsx,.css,.json,.md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^2.0.0",
+    "@jupyterlab/apputils": "^2.0.0"
+  },
+  "devDependencies": {
+    "husky": "^3.0.1",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.13.7",
+    "rimraf": "^3.0.2",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typedoc": "^0.19.1",
+    "typescript": "~4.0.2"
+  },
+  "sideEffects": true,
+  "jupyterlab": {
+    "extension": true,
+    "themePath": "style/index.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
